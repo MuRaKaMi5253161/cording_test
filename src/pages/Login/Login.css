@@ -1,0 +1,63 @@
+.Login {
+    padding-top: 200px;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+    font-family: sans-serif;
+}
+
+::placeholder {
+    color:white;
+}
+
+.title {
+    text-align: center;
+    font-weight: 100;
+    font-size: 15px;
+    margin: 0;
+}
+
+.input {
+    width: 400px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    border-style: none;
+    color: gray;
+    padding-left: 20px;
+    outline:none;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.submit {
+    width: 430px;
+    height: 50px;
+    border-radius: 20px;
+    border-style: none;
+    color: gray;
+    background-color: rgba(255,255,255,0.5);
+    transition: 1s;
+}
+
+.submit:hover {
+    background-color: rgb(93, 92, 92);
+    color: white;
+    transition: 1s;
+}
+
+.main {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    width: 60%;
+    border-radius: 30px;
+}
+
+.mail {
+    margin: 10px !important;
+}
+
+.password {
+    margin-bottom: 30px !important;
+}

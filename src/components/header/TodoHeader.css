@@ -1,0 +1,17 @@
+.header {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(236, 236, 236, 0.3);
+    border-bottom: solid #FFF;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+    position: fixed;
+    text-align: center;
+}
+
+@media screen and (max-width:480px) {
+    .header {
+        display: none;
+    }
+}

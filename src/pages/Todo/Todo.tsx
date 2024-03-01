@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
 import './Todo.css';
+import Task from '../../components/Task/Task';
 
 function Todo() {
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +19,22 @@ function Todo() {
 
       <div className='taskBox'>
         <div className='taskLineBox'>
-          <p>タスクはありません</p>
+          {/* <p className='noTaskTitle'>タスクはありません</p> */}
+          <div className='TaskBox'>
+            <Task />
+          </div>
+          <div className='TaskBox'>
+            <Task />
+          </div>
+          <div className='TaskBox'>
+            <Task />
+          </div>
+          <div className='TaskBox'>
+            <Task />
+          </div>
+          <div className='TaskBox'>
+            <Task />
+          </div>
         </div>
       </div>
     </div>

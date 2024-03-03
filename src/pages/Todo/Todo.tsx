@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
 import './Todo.css';
 import Task from '../../components/Task/Task';
-import { DocumentData, collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { DocumentData, collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../../firebase';
 
 function Todo() {
@@ -17,10 +17,10 @@ function Todo() {
 
   useEffect(() =>{
     const tasks = collection(db,"tasks");
-    const taskList = query(tasks,orderBy("limitDate","desc"));
-    getDocs(taskList).then((QuerySnapshot) => {
-    setTasks(QuerySnapshot.docs.map((doc) => doc.data()));
-    });
+    const taskList = query(tasks,orderBy("limitDate","asc"));
+    onSnapshot(taskList,(taskSnapShot) => {
+      setTasks(taskSnapShot.docs.map((doc) => doc.data()))
+    })
   },[]);
 
   return (

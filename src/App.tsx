@@ -8,9 +8,12 @@ import {
 import Login from './pages/Login/Login';
 import Todo from './pages/Todo/Todo';
 import SignUp from './pages/SignUp/SignUp';
+import TodoHeader from './components/header/TodoHeader';
 
 function App() {
   return (
+    <div>
+      <TodoHeader />
       <Router>
         <div className="App">
           <Routes>
@@ -20,6 +23,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+    </div>
   );
 }
 

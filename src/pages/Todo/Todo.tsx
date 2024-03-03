@@ -11,13 +11,13 @@ function Todo() {
 
   type PropsType = {
     title: string;
-    endDate: string;
+    limitDate: string;
     otherText: string;
   }
 
   useEffect(() =>{
     const tasks = collection(db,"tasks");
-    const taskList = query(tasks,orderBy("endDate","desc"));
+    const taskList = query(tasks,orderBy("limitDate","desc"));
     getDocs(taskList).then((QuerySnapshot) => {
     setTasks(QuerySnapshot.docs.map((doc) => doc.data()));
     });
@@ -41,7 +41,7 @@ function Todo() {
             <div className='TaskBox'>
               <Task  
               title={task.title}
-              endDate={task.endDate}
+              limitDate={task.limitDate}
               otherText={task.otherText}
               />
             </div>

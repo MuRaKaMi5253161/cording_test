@@ -1,15 +1,15 @@
 import React from 'react';
 import './Task.css';
 
-function Task() {
+const Task: React.FC<{ title: string; endDate: string; otherText: string }> = (props) => {
   return (
     <div className='Task'>
       <div className='TaskNameBox'>
-        <p className='TaskName'>テスト</p>
+        <p className='TaskName'>{props.title}</p>
       </div>
       <div className='TaskDetail'>
-        <p>2024/99/99 まで</p>
-        <p>説明文</p>
+        <p>{props.endDate}まで</p>
+        <p>{props.otherText}</p>
       </div>
     </div>
   );

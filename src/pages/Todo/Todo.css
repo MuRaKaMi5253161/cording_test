@@ -3,13 +3,13 @@
     width: 60%;
     height: 100%;
     margin: 0 auto;
-    color: white;
-    font-family: sans-serif;
+    color: #005b9b;
     text-align: center;
 }
 
 .title {
     margin: 10px;
+    font-family: sans-serif;
 }
 
 .newTaskBtn {
@@ -18,15 +18,18 @@
     text-align: center;
     border-radius: 10px;
     border-style: none;
-    color: gray;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
     margin-top: 10px;
     margin-bottom: 120px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: #005b9b;
     transition: 1s;
 }
 
 .newTaskBtn:hover {
-    background-color: rgb(93, 92, 92);
+    background-color: rgb(21, 19, 72)!important;
     color: white;
     transition: 1s;
 }

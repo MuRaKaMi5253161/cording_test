@@ -74,7 +74,7 @@ function SignUp() {
   return (
     <div className="SignUp">
         <div className='title'>
-            <h1>SignUp</h1>
+            <h1 className='titleText'>サインイン</h1>
         </div>
         <div className='main'>
             <form onSubmit={signUp}>
@@ -89,27 +89,27 @@ function SignUp() {
               </div>
 
               <div className='name'>
-                <p className='inputNameTitle'>Name</p>
+                <p className='inputNameTitle'>お名前</p>
                 <input type='text' className='input' placeholder='お名前を入力してください' onChange={(e) => setName(e.target.value)} />
               </div>
 
               <div className='mail'>
-                <p className='inputMailTitle'>Mail</p>
+                <p className='inputMailTitle'>メールアドレス</p>
                 <input type='mail' className='input' placeholder='メールアドレスを入力してください' onChange={(e) => setMail(e.target.value)} />
               </div>
 
               <div className='pass'>
-                <p className='inputTitle'>Password</p>
+                <p className='inputTitle'>パスワード</p>
                 <input type='pass' className='input' placeholder='パスワードを設定してください' onChange={(e) => setPass(e.target.value)} />
               </div>
 
               <div className='birthDay'>
-                <p className='inputTitle'>BirthDay</p>
+                <p className='inputTitle'>生年月日</p><br/>
                 <input type="date" className='inputDate' name="birthday" onChange={(e) => setBirthday(e.target.value)} />
               </div>
 
               <div className='gender'>
-                <p className='inputGenderTitle'>Gender</p>
+                <p className='inputGenderTitle'>性別</p><br/>
                 <select name='inputGender' className='inputGender' onChange={(e) => setGender(e.target.value)}>
                   <option value='men' selected>men</option>
                   <option value='women'>women</option>
@@ -123,7 +123,7 @@ function SignUp() {
               </label>
               </div>
 
-              <button type='submit' className='submit' value="SignUp" />
+              <input type='submit' className='submit' value="signup" />
             </form>
         </div>
     </div>

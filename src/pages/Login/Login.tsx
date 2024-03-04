@@ -32,10 +32,12 @@ function Login() {
         <div className='main'>
             <form onSubmit={SignIn}>
                 <div className='mail'>
+                  <p className='inputTitle'>メールアドレス</p>
                   <input type='mail' className='input' placeholder='メールアドレスを入力してください' onChange={(e) => setMail(e.target.value)} />
                 </div>
 
                 <div className='password'>
+                  <p className='inputTitle'>パスワード</p>
                   <input type='pass' className='input' placeholder='パスワードを入力してください' onChange={(e) => setPass(e.target.value)} />
                 </div>
 

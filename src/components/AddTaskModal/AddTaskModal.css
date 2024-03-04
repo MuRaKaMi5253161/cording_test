@@ -5,12 +5,16 @@ top:0;
 left:0;
 width: 100%;
 height: 100%;
-background-color:rgba(0, 0, 0, 0.8);
+background-color:rgba(139, 181, 220, 0.95);
 
 /*　画面の中央に要素を表示させる設定　*/
 display: flex;
 align-items: center;
 justify-content: center;
+}
+
+::placeholder {
+    color: gray !important;
 }
 
 .addTasksForm {
@@ -19,6 +23,16 @@ justify-content: center;
     height: 100%;
     width: 60%;
     border-radius: 30px;
+}
+
+.addTasksTitle {
+    color: white !important;
+    font-size: 20px;
+}
+
+.itemTitle {
+    color: white;
+    margin: 3px;
 }
 
 .TaskTitleBox {
@@ -31,27 +45,28 @@ justify-content: center;
     font-size: 15px;
     border-radius: 10px;
     border-style: none;
-    color: white;
+    color: rgb(21, 19, 72) !important;
     padding-left: 20px;
     outline:none;
     background-color: rgba(255,255,255,0.3);
 }
 
-.TaskTitle::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
 .limitDate {
-    width: 120px;
-    height: 30px;
+    width: 285px;
+    height: 40px;
     font-size: 15px;
     border-radius: 10px;
     border-style: none;
-    color: rgba(255, 255, 255, 0.7);
-    padding-left: 10px;
-    padding-right: 15px;
+    color: rgb(21, 19, 72) !important;
+    font-family: sans-serif;
+    padding-left: 15px;
+    padding-right: 20px;
     outline:none;
     background-color: rgba(255,255,255,0.3);
+}
+
+.otherTextBox {
+    padding: 20px;
 }
 
 .otherText {
@@ -60,9 +75,10 @@ justify-content: center;
     font-size: 15px;
     border-radius: 10px;
     border-style: none;
-    color: white;
+    color: rgb(21, 19, 72) !important;
     padding: 10px;
     outline:none;
+    font-family: sans-serif;
     background-color: rgba(255,255,255,0.3);
 }
 
@@ -76,14 +92,14 @@ justify-content: center;
     text-align: center;
     border-radius: 10px;
     border-style: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
     margin-bottom: 40px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: #005b9b;
     transition: 1s;
 }
 
 .submitBtn:hover {
-    background-color: rgb(93, 92, 92);
+    background-color: rgb(21, 19, 72);
     color: white;
     transition: 1s;
 }
@@ -94,14 +110,14 @@ justify-content: center;
     text-align: center;
     border-radius: 10px;
     border-style: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
     margin-bottom: 40px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgb(225, 92, 92);
     transition: 1s;
 }
 
 .cancelBtn:hover {
-    background-color: rgb(255, 100, 100,0.5);
-    color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(141, 61, 61);
+    color: white;
     transition: 1s;
 }

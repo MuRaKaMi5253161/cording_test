@@ -31,15 +31,21 @@ const AddTaskModal:React.FC<any> = (props) => {
     {props.showFlag ? ( // showFlagがtrueだったらModalを表示する
         <div className='addTasks'>
           <div>
+            <div>
+              <h1 className='addTasksTitle'>タスクの内容を入力しましょう</h1>
+            </div>
             <form onSubmit={addNewTask}>
               <div className='TaskTitleBox'>
+                <p className="itemTitle">タスク名</p>
                 <input type='text' className='TaskTitle' placeholder='タスクを入力してください' onChange={(e) => setTaskTitle(e.target.value)} />
               </div>
               <div className='dateBox'>
-                  <input type='date' className='limitDate' onChange={(e) => setLimitDate(e.target.value)} ></input>
+                <p className='itemTitle'>期限</p>
+                <input type='date' className='limitDate' onChange={(e) => setLimitDate(e.target.value)} ></input>
               </div>
               <div className='otherTextBox'>
-                  <p><textarea className='otherText' placeholder='その他' onChange={(e) => setOtherText(e.target.value)} ></textarea></p>
+              <p className='itemTitle'>メモなど</p>
+                  <textarea className='otherText' placeholder='その他' onChange={(e) => setOtherText(e.target.value)} ></textarea>
               </div>
               <input type='submit' className='submitBtn' value="add Task" />
               <div className="cancelBtnBox">

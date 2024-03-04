@@ -1,19 +1,33 @@
 .Login {
-    padding-top: 200px;
+    padding-top: 100px;
     width: 60%;
     height: 100%;
     margin: 0 auto;
-    color: white;
+    color: #005b9b;
     font-family: sans-serif;
 }
 
 ::placeholder {
-    color:white;
+    color:gray !important;
+}
+
+.main {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    width: 430px;
+    padding-top: 50px;
+    border-radius: 30px;
+}
+
+form {
+    width: 100%;
 }
 
 .titleText {
     text-align: center;
     font-size: 15px;
+    color: #005b9b;
     margin: 0;
 }
 
@@ -21,26 +35,30 @@
     width: 400px;
     height: 50px;
     font-size: 15px;
+    font-family: sans-serif;
     border-radius: 10px;
     border-style: none;
-    color: gray;
+    color: rgb(21, 19, 72) !important;
+    border: solid #005b9b !important;
     padding-left: 20px;
     outline:none;
-    background-color: rgba(255,255,255,0.3);
+    background-color: #ffece2 !important;
 }
 
 .submit {
     width: 430px;
     height: 50px;
+    font-family: sans-serif;
     border-radius: 20px;
     border-style: none;
-    color: gray;
-    background-color: rgba(255,255,255,0.5);
+    border: solid #005b9b;
+    color: white !important;
+    background-color: #005b9b !important;
     transition: 1s;
 }
 
 .submit:hover {
-    background-color: rgb(93, 92, 92);
+    background-color: rgb(21, 19, 72)!important;
     color: white;
     transition: 1s;
 }
@@ -51,6 +69,11 @@
     height: 100%;
     width: 60%;
     border-radius: 30px;
+}
+
+.inputTitle {
+    float: left;
+    margin: 0;
 }
 
 .mail {

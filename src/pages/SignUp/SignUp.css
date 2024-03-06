@@ -1,170 +1,173 @@
 .SignUp {
-    padding-top: 100px;
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
-    color: #005b9b;
+  padding-top: 100px;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  color: #005b9b;
 }
 
 ::placeholder {
-    color:white;
+  color: white;
 }
 
 .titleText {
-    text-align: center;
-    font-size: 15px;
-    font-family: sans-serif;
-    color: #005b9b;
-    margin: 0;
-    padding-top: 30px;
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #005b9b;
+  margin: 0;
+  padding-top: 30px;
 }
 
 .main {
-    margin: 0 auto;
-    text-align: center;
-    height: 100%;
-    width: 430px;
-    border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 430px;
+  border-radius: 30px;
 }
 
 form {
-    width: 100%;
+  width: 100%;
 }
 
 .profile {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .profileImgBox {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .profileImg {
-    width: 160px;
-    height: 160px;
-    border-radius: 100px;
-    border-color: #fff;
-    border-style: solid;
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  border-color: #fff;
+  border-style: solid;
 }
 
 .profileInput {
-    display: none;
-    width: 200px;
-    height: 60px;
+  display: none;
+  width: 200px;
+  height: 60px;
 }
 
 .profileLabel {
-    font-size: 10px;
-    padding: 10px 40px;
-    cursor: pointer;
-    border-radius: 20px;
-    border-style: none;
-    color: gray;
-    background-color: rgba(255,255,255,0.5);
-    transition: 1s;
+  font-size: 10px;
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: none;
+  color: gray;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 1s;
 }
 
 .profileLabel:hover {
-    background-color: rgb(93, 92, 92);
-    color: white;
-    transition: 1s;
+  background-color: rgb(93, 92, 92);
+  color: white;
+  transition: 1s;
 }
 
 .input {
-    width: 400px;
-    height: 50px;
-    font-size: 15px;
-    font-family: sans-serif;
-    border-radius: 10px;
-    border-style: none;
-    border: solid #005b9b;
-    color: rgb(21, 19, 72);
-    padding-left: 20px;
-    outline:none;
-    background-color: #ffece2 !important;
-    margin-bottom: 20px;
+  width: 400px;
+  height: 50px;
+  font-size: 15px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  border: solid #005b9b;
+  color: rgb(21, 19, 72);
+  padding-left: 20px;
+  outline: none;
+  background-color: #ffece2 !important;
+  margin-bottom: 20px;
 }
 
 .inputTitle {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .inputNameTitle {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .inputMailTitle {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .mail {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .inputGenderTitle {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .inputDate {
-    width: 180px;
-    height: 50px;
-    font-size: 15px;
-    border-radius: 10px;
-    border-style: none;
-    border: solid #005b9b;
-    color: rgb(21, 19, 72);
-    padding-left: 20px;
-    padding-right: 15px;
-    outline:none;
-    font-family: sans-serif;
-    background-color: #ffece2 !important;
-    float: left;
+  width: 180px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-style: none;
+  border: solid #005b9b;
+  color: rgb(21, 19, 72);
+  padding-left: 20px;
+  padding-right: 15px;
+  outline: none;
+  font-family: sans-serif;
+  background-color: #ffece2 !important;
+  float: left;
 }
 
 .gender {
-    margin-top: 30px;
-    padding-top: 40px;
-    padding-bottom:80px;
+  margin-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 .inputGender {
-    width: 110px;
-    height: 50px;
-    font-size: 15px;
-    font-family: sans-serif;
-    border-radius: 10px;
-    border-style: none;
-    padding-left: 15px;
-    padding-right: 10px;
-    color: rgb(21, 19, 72);
-    border: solid #005b9b;
-    outline:none;
-    background-color: #ffece2 !important;
-    margin-bottom: 20px;
-    float: left;
+  width: 110px;
+  height: 50px;
+  font-size: 15px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  padding-left: 15px;
+  padding-right: 10px;
+  color: rgb(21, 19, 72);
+  border: solid #005b9b;
+  outline: none;
+  background-color: #ffece2 !important;
+  margin-bottom: 20px;
+  float: left;
 }
 
 .submit {
-    width: 350px;
-    height: 50px;
-    font-family: sans-serif;
-    text-align: center;
-    border-radius: 20px;
-    border-style: none;
-    color: white !important;
-    margin-top: 20px;
-    margin-bottom: 120px;
-    background-color: #005b9b !important;
-    transition: 1s;
+  width: 350px;
+  height: 50px;
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 20px;
+  border-style: none;
+  color: white !important;
+  margin-top: 20px;
+  margin-bottom: 120px;
+  background-color: #005b9b !important;
+  transition: 1s;
 }
 
 .submit:hover {
-    background-color: rgb(21, 19, 72)!important;
-    color: white !important;
-    transition: 1s;
+  background-color: rgb(21, 19, 72) !important;
+  color: white !important;
+  transition: 1s;
 }
 
+.moveLoginPageText {
+  padding-bottom: 100px;
+}

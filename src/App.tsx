@@ -9,17 +9,21 @@ import Login from './pages/Login/Login';
 import Todo from './pages/Todo/Todo';
 import SignUp from './pages/SignUp/SignUp';
 import TodoHeader from './components/header/TodoHeader';
+import User from './pages/User/User';
 
 function App() {
   return (
     <div>
-      <TodoHeader />
       <Router>
+        <Routes>
+          <Route path='/' element={<TodoHeader/>} />
+        </Routes>
         <div className="App">
           <Routes>
             <Route path='/' element={<Todo/>} />
             <Route path='/Login' element={<Login/>} />
             <Route path='/SignUp' element={<SignUp/>} />
+            <Route path='/User' element={<User/>} />
           </Routes>
         </div>
       </Router>

@@ -3,17 +3,32 @@ import AddTaskModal from '../../components/AddTaskModal/AddTaskModal';
 import './Todo.css';
 import Task from '../../components/Task/Task';
 import { DocumentData, collection, onSnapshot, orderBy, query } from 'firebase/firestore';
-import { db } from '../../firebase';
+import { auth, db } from '../../firebase';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 function Todo() {
   const [showModal, setShowModal] = useState(false);
   const [tasks, setTasks] = useState<DocumentData>([]);
+  const navigation = useNavigate();
 
   type PropsType = {
     title: string;
     limitDate: string;
     otherText: string;
   }
+
+  // ログイン情報の確認
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        return;
+      } else {
+        navigation("/Login");
+      }
+    });
+  },[navigation]);
+    
 
   useEffect(() =>{
     const tasks = collection(db,"tasks");

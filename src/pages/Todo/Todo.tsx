@@ -8,6 +8,7 @@ import {
   onSnapshot,
   orderBy,
   query,
+  where,
 } from "firebase/firestore";
 import { auth, db } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
@@ -15,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 function Todo() {
   const [showModal, setShowModal] = useState(false);
+  const [userId, setUserId] = useState("");
   const [tasks, setTasks] = useState<DocumentData>([]);
   const navigation = useNavigate();
 
@@ -28,6 +30,7 @@ function Todo() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
+        setUserId(user.uid);
         return;
       } else {
         navigation("/Login");
@@ -37,11 +40,15 @@ function Todo() {
 
   useEffect(() => {
     const tasks = collection(db, "tasks");
-    const taskList = query(tasks, orderBy("limitDate", "asc"));
+    const taskList = query(
+      tasks,
+      where("userId", "==", userId),
+      orderBy("limitDate", "asc")
+    );
     onSnapshot(taskList, (taskSnapShot) => {
       setTasks(taskSnapShot.docs.map((doc) => doc.data()));
     });
-  }, []);
+  }, [userId]);
 
   return (
     <div className="Todo">
@@ -56,7 +63,11 @@ function Todo() {
       />
 
       <div className="ModalBox">
-        <AddTaskModal showFlag={showModal} setShowModal={setShowModal} />
+        <AddTaskModal
+          showFlag={showModal}
+          userId={userId}
+          setShowModal={setShowModal}
+        />
       </div>
 
       <div className="taskBox">

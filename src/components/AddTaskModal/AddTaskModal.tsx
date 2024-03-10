@@ -15,6 +15,7 @@ const AddTaskModal: React.FC<any> = (props) => {
       title: title,
       limitDate: limitDate,
       otherText: otherText,
+      userId: props.userId,
     });
     props.setShowModal(false);
     return;

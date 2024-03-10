@@ -1,123 +1,123 @@
 .addTasks {
-/*　画面全体を覆う設定　*/
-position:fixed;
-top:0;
-left:0;
-width: 100%;
-height: 100%;
-background-color:rgba(139, 181, 220, 0.95);
+  /*　画面全体を覆う設定　*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(139, 181, 220, 0.95);
 
-/*　画面の中央に要素を表示させる設定　*/
-display: flex;
-align-items: center;
-justify-content: center;
+  /*　画面の中央に要素を表示させる設定　*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ::placeholder {
-    color: gray !important;
+  color: gray !important;
 }
 
 .addTasksForm {
-    margin: 0 auto;
-    text-align: center;
-    height: 100%;
-    width: 60%;
-    border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 60%;
+  border-radius: 30px;
 }
 
 .addTasksTitle {
-    color: white !important;
-    font-size: 20px;
+  color: white !important;
+  font-size: 20px;
 }
 
 .itemTitle {
-    color: white;
-    margin: 3px;
+  color: white;
+  margin: 3px;
 }
 
 .TaskTitleBox {
-    padding: 20px;
+  padding: 20px;
 }
 
 .TaskTitle {
-    width: 300px;
-    height: 50px;
-    font-size: 15px;
-    border-radius: 10px;
-    border-style: none;
-    color: rgb(21, 19, 72) !important;
-    padding-left: 20px;
-    outline:none;
-    background-color: rgba(255,255,255,0.3);
+  width: 300px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-style: none;
+  color: rgb(21, 19, 72) !important;
+  padding-left: 20px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .limitDate {
-    width: 285px;
-    height: 40px;
-    font-size: 15px;
-    border-radius: 10px;
-    border-style: none;
-    color: rgb(21, 19, 72) !important;
-    font-family: sans-serif;
-    padding-left: 15px;
-    padding-right: 20px;
-    outline:none;
-    background-color: rgba(255,255,255,0.3);
+  width: 285px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-style: none;
+  color: rgb(21, 19, 72) !important;
+  font-family: sans-serif;
+  padding-left: 15px;
+  padding-right: 20px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .otherTextBox {
-    padding: 20px;
+  padding: 20px;
 }
 
 .otherText {
-    width: 300px;
-    height: 100px;
-    font-size: 15px;
-    border-radius: 10px;
-    border-style: none;
-    color: rgb(21, 19, 72) !important;
-    padding: 10px;
-    outline:none;
-    font-family: sans-serif;
-    background-color: rgba(255,255,255,0.3);
+  width: 300px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-style: none;
+  color: rgb(21, 19, 72) !important;
+  padding: 10px;
+  outline: none;
+  font-family: sans-serif;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .otherText::placeholder {
-    color: rgba(255, 255, 255, 0.5);;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .submitBtn {
-    width: 320px;
-    height: 50px;
-    text-align: center;
-    border-radius: 10px;
-    border-style: none;
-    color: white;
-    margin-bottom: 40px;
-    background-color: #005b9b;
-    transition: 1s;
+  width: 320px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  margin-bottom: 40px;
+  background-color: #005b9b;
+  transition: 1s;
 }
 
 .submitBtn:hover {
-    background-color: rgb(21, 19, 72);
-    color: white;
-    transition: 1s;
+  background-color: rgb(21, 19, 72);
+  color: white;
+  transition: 1s;
 }
 
 .cancelBtn {
-    width: 220px;
-    height: 50px;
-    text-align: center;
-    border-radius: 10px;
-    border-style: none;
-    color: white;
-    margin-bottom: 40px;
-    background-color: rgb(225, 92, 92);
-    transition: 1s;
+  width: 220px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  margin-bottom: 40px;
+  background-color: rgb(225, 92, 92);
+  transition: 1s;
 }
 
 .cancelBtn:hover {
-    background-color: rgb(141, 61, 61);
-    color: white;
-    transition: 1s;
+  background-color: rgb(141, 61, 61);
+  color: white;
+  transition: 1s;
 }

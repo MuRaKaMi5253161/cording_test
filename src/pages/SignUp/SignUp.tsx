@@ -149,7 +149,9 @@ const SignUp = (props: any) => {
         // 認証成功の時にユーザー情報をfireStoreに保存
         sendUserInfo(userCredential.user.uid);
         // プロフィール画像をStorageに保存
-        sendUserProfile(userCredential.user.uid);
+        if (profileImageFile) {
+          sendUserProfile(userCredential.user.uid);
+        }
         alert("アカウント登録に成功しました");
         navigation("/Login");
       })

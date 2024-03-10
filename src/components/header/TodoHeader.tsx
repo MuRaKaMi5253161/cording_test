@@ -10,6 +10,10 @@ const TodoHeader: React.FC = () => {
   const [profileImage, setProfileImage] = useState(Profile);
   const navigation = useNavigate();
 
+  const moveTodoPage = () => {
+    navigation("/");
+  };
+
   const getUserProfile = (userId: string) => {
     const storageRef = ref(storage, "profileImg/" + userId + "/profileName");
     getDownloadURL(storageRef)
@@ -39,7 +43,9 @@ const TodoHeader: React.FC = () => {
   return (
     <div className="header">
       <div className="header-menu-line">
-        <span className="headerTitle">Todo</span>
+        <span className="headerTitle" onClick={moveTodoPage}>
+          Todo
+        </span>
         <span>
           <img
             src={profileImage}

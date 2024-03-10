@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Profile from "../../img/defaultProfile.jpg";
 import "./User.css";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -21,9 +21,8 @@ function User() {
     getDownloadURL(storageRef)
       .then((url) => {
         setProfileImage(url);
-        console.log("成功");
       })
-      .catch((err) => console.log(err));
+      .catch(() => setProfileImage(Profile));
   };
 
   const getUserInfo = async (userId: string) => {
@@ -31,7 +30,6 @@ function User() {
     const currentUser = query(users, where("id", "==", userId));
     const querySnapshot = await getDocs(currentUser);
     querySnapshot.forEach((doc) => {
-      console.log(doc.id, " => ", doc.data().name);
       setName(doc.data().name);
       setMail(doc.data().mail);
       setBirthday(doc.data().birthday);
@@ -55,7 +53,6 @@ function User() {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        console.log(uid);
         getUserProfile(uid);
         getUserInfo(uid);
       } else {

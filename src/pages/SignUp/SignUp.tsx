@@ -78,8 +78,6 @@ const SignUp = (props: any) => {
     if (mail === (null || undefined || "")) {
       setMailErrorMessage("メールは1文字以上入力してください");
       setErrorFlag(true);
-      console.log(errorFlg);
-      console.log(mailErrorMessage);
       return;
     }
     if (mail.length > 100) {
@@ -92,8 +90,6 @@ const SignUp = (props: any) => {
         "メールは全角半角英数記号(-_.)6文字以上@～の形式で入力してください"
       );
       setErrorFlag(true);
-      console.log(errorFlg);
-      console.log(mailErrorMessage);
       return;
     }
     if (pass === (null || undefined || "")) {

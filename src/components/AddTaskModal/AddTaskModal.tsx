@@ -9,8 +9,6 @@ const AddTaskModal: React.FC<any> = (props) => {
   const [otherText, setOtherText] = useState("");
 
   const addNewTask = () => {
-    console.log(title, limitDate, otherText);
-
     addDoc(collection(db, "tasks"), {
       title: title,
       limitDate: limitDate,

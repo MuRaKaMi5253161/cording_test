@@ -1,85 +1,86 @@
 .Login {
-    padding-top: 100px;
-    width: 60%;
-    height: 100%;
-    margin: 0 auto;
-    color: #005b9b;
-    font-family: sans-serif;
+  padding-top: 100px;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  color: #005b9b;
+  font-family: sans-serif;
 }
 
 ::placeholder {
-    color:gray !important;
+  color: gray !important;
 }
 
 .main {
-    margin: 0 auto;
-    text-align: center;
-    height: 100%;
-    width: 430px;
-    padding-top: 50px;
-    border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 430px;
+  padding-top: 50px;
+  border-radius: 30px;
 }
 
 form {
-    width: 100%;
+  width: 100%;
 }
 
 .titleText {
-    text-align: center;
-    font-size: 15px;
-    color: #005b9b;
-    margin: 0;
+  text-align: center;
+  font-size: 15px;
+  color: #005b9b;
+  margin: 0;
 }
 
 .input {
-    width: 400px;
-    height: 50px;
-    font-size: 15px;
-    font-family: sans-serif;
-    border-radius: 10px;
-    border-style: none;
-    color: rgb(21, 19, 72) !important;
-    border: solid #005b9b !important;
-    padding-left: 20px;
-    outline:none;
-    background-color: #ffece2 !important;
+  width: 400px;
+  height: 50px;
+  font-size: 15px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  color: rgb(21, 19, 72) !important;
+  border: solid #005b9b !important;
+  padding-left: 20px;
+  outline: none;
+  background-color: #ffece2 !important;
 }
 
 .submit {
-    width: 430px;
-    height: 50px;
-    font-family: sans-serif;
-    border-radius: 20px;
-    border-style: none;
-    border: solid #005b9b;
-    color: white !important;
-    background-color: #005b9b !important;
-    transition: 1s;
+  width: 430px;
+  height: 50px;
+  font-family: sans-serif;
+  border-radius: 20px;
+  border-style: none;
+  border: solid #005b9b;
+  color: white !important;
+  background-color: #005b9b !important;
+  margin: 20px;
+  transition: 1s;
 }
 
 .submit:hover {
-    background-color: rgb(21, 19, 72)!important;
-    color: white;
-    transition: 1s;
+  background-color: rgb(21, 19, 72) !important;
+  color: white;
+  transition: 1s;
 }
 
 .main {
-    margin: 0 auto;
-    text-align: center;
-    height: 100%;
-    width: 60%;
-    border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 60%;
+  border-radius: 30px;
 }
 
 .inputTitle {
-    float: left;
-    margin: 0;
+  float: left;
+  margin: 0;
 }
 
 .mail {
-    margin: 10px !important;
+  margin: 10px !important;
 }
 
 .password {
-    margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }

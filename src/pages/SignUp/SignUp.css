@@ -162,6 +162,7 @@ form {
   margin-bottom: 120px;
   background-color: #005b9b !important;
   transition: 1s;
+  margin: 20px;
 }
 
 .submit:hover {

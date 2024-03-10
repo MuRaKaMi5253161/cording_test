@@ -104,9 +104,8 @@ form {
   margin: 0 !important;
 }
 
-.inputGenderTitle {
-  float: left;
-  margin: 0;
+.birthDay {
+  height: 100px;
 }
 
 .inputDate {
@@ -125,10 +124,13 @@ form {
   float: left;
 }
 
-.gender {
-  margin-top: 30px;
-  padding-top: 40px;
-  padding-bottom: 80px;
+.genderBox {
+  height: 100px;
+}
+
+.inputGenderTitle {
+  float: left;
+  margin: 0;
 }
 
 .inputGender {
@@ -170,4 +172,18 @@ form {
 
 .moveLoginPageText {
   padding-bottom: 100px;
+}
+
+.errorMessage {
+  text-align: left;
+  color: red !important;
+  font-size: 15px;
+  margin: 0;
+}
+
+.termsErrorMessage {
+  text-align: center;
+  color: red !important;
+  font-size: 15px;
+  margin: 0;
 }

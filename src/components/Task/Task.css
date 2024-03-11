@@ -43,3 +43,24 @@
   font-size: 12px;
   font-family: sans-serif;
 }
+
+.taskDeleteBtn {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  margin-bottom: 40px;
+  background-color: #005b9b;
+  transition: 1s;
+}
+
+.taskDeleteBtn:hover {
+  background-color: rgb(21, 19, 72);
+  color: white;
+  transition: 1s;
+}

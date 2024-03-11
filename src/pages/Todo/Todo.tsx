@@ -21,6 +21,7 @@ function Todo() {
   const navigation = useNavigate();
 
   type PropsType = {
+    id: string;
     title: string;
     limitDate: string;
     otherText: string;
@@ -39,14 +40,14 @@ function Todo() {
   }, [navigation]);
 
   useEffect(() => {
-    const tasks = collection(db, "tasks");
+    const taskData = collection(db, "tasks");
     const taskList = query(
-      tasks,
+      taskData,
       where("userId", "==", userId),
       orderBy("limitDate", "asc")
     );
     onSnapshot(taskList, (taskSnapShot) => {
-      setTasks(taskSnapShot.docs.map((doc) => doc.data()));
+      setTasks(taskSnapShot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
   }, [userId]);
 
@@ -76,6 +77,7 @@ function Todo() {
           {tasks.map((task: PropsType) => (
             <div className="TaskBox">
               <Task
+                id={task.id}
                 title={task.title}
                 limitDate={task.limitDate}
                 otherText={task.otherText}

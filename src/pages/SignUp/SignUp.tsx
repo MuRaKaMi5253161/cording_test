@@ -17,6 +17,7 @@ const SignUp = (props: any) => {
   const [nameErrorMessage, setNameErrorMessage] = useState("");
   const [mailErrorMessage, setMailErrorMessage] = useState("");
   const [passErrorMessage, setPassErrorMessage] = useState("");
+  const [rePassErrorMessage, setRePassErrorMessage] = useState("");
   const [birthDayErrorMessage, setBirthDayErrorMessage] = useState("");
   const [genderErrorMessage, setGenderErrorMessage] = useState("");
   const [termsErrorMessage, setTermsErrorMessage] = useState("");
@@ -60,6 +61,7 @@ const SignUp = (props: any) => {
     setNameErrorMessage("");
     setMailErrorMessage("");
     setPassErrorMessage("");
+    setRePassErrorMessage("");
     setBirthDayErrorMessage("");
     setGenderErrorMessage("");
     setTermsErrorMessage("");
@@ -108,7 +110,7 @@ const SignUp = (props: any) => {
       return;
     }
     if (pass !== rePass) {
-      setPassErrorMessage("入力したパスワードが一致していません");
+      setRePassErrorMessage("入力したパスワードが一致していません");
       setErrorFlag(true);
       return;
     }
@@ -180,7 +182,7 @@ const SignUp = (props: any) => {
           </div>
 
           <div className="name">
-            <p className="inputNameTitle">お名前</p>
+            <p className="signUpInputTitle">お名前</p>
             <input
               type="text"
               className="input"
@@ -191,7 +193,7 @@ const SignUp = (props: any) => {
           </div>
 
           <div className="mail">
-            <p className="inputMailTitle">メールアドレス</p>
+            <p className="signUpInputTitle">メールアドレス</p>
             <input
               type="mail"
               className="input"
@@ -202,7 +204,7 @@ const SignUp = (props: any) => {
           </div>
 
           <div className="pass">
-            <p className="inputTitle">パスワード</p>
+            <p className="signUpInputTitle">パスワード</p>
             <input
               type="pass"
               className="input"
@@ -213,17 +215,18 @@ const SignUp = (props: any) => {
           </div>
 
           <div className="pass">
-            <p className="inputTitle">パスワード再入力</p>
+            <p className="signUpInputTitle">パスワード再入力</p>
             <input
               type="pass"
               className="input"
               placeholder="パスワードを設定してください"
               onChange={(e) => setRePass(e.target.value)}
             />
+            <p className="errorMessage">{rePassErrorMessage}</p>
           </div>
 
           <div className="birthDay">
-            <p className="inputTitle">生年月日</p>
+            <p className="signUpInputTitle">生年月日</p>
             <br />
             <input
               type="date"
@@ -235,7 +238,7 @@ const SignUp = (props: any) => {
           <p className="errorMessage">{birthDayErrorMessage}</p>
 
           <div className="genderBox">
-            <p className="inputGenderTitle">性別</p>
+            <p className="signUpInputTitle">性別</p>
             <br />
             <select
               name="inputGender"

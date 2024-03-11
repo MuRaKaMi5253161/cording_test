@@ -9,6 +9,12 @@
   color: rgb(120, 120, 120);
 }
 
+@media screen and (max-width: 480px) {
+  .Task {
+    height: 180px;
+  }
+}
+
 .TaskNameBox {
   width: 100%;
 }
@@ -24,6 +30,12 @@
   font-weight: bold;
   font-family: sans-serif;
   border-bottom: solid #005b9b;
+}
+
+@media screen and (max-width: 480px) {
+  .TaskName {
+    height: 20px;
+  }
 }
 
 .TaskDetail {

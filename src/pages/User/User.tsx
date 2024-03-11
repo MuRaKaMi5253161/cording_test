@@ -83,22 +83,22 @@ function User() {
           </div>
 
           <div className="userName">
-            <p className="inputNameTitle">お名前</p>
+            <p className="userInputTitle">お名前</p>
             <p className="userValue">{name}</p>
           </div>
 
           <div className="userMail">
-            <p className="inputMailTitle">メールアドレス</p>
+            <p className="userInputTitle">メールアドレス</p>
             <p className="userValue">{mail}</p>
           </div>
 
           <div className="userBirthDay">
-            <p className="inputTitle">生年月日</p>
+            <p className="userInputTitle">生年月日</p>
             <p className="userValue">{birthday}</p>
           </div>
 
           <div className="userGender">
-            <p className="inputGenderTitle">性別</p>
+            <p className="userInputTitle">性別</p>
             <p className="userValue">{gender}</p>
           </div>
 

@@ -41,7 +41,7 @@ const TodoHeader: React.FC = () => {
   };
 
   return (
-    <div className="header">
+    <div className="TodoHeader">
       <div className="header-menu-line">
         <span className="headerTitle" onClick={moveTodoPage}>
           Todo

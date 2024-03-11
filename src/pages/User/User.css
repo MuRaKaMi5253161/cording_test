@@ -35,6 +35,12 @@ form {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 480px) {
+  .profile {
+    margin-bottom: 10px;
+  }
+}
+
 .profileImgBox {
   padding-bottom: 20px;
 }
@@ -64,24 +70,16 @@ form {
   transition: 1s;
 }
 
-.inputTitle {
+.userInputTitle {
   float: left;
   margin: 0;
 }
 
-.inputNameTitle {
-  float: left;
-  margin: 0;
-}
-
-.inputMailTitle {
-  float: left;
-  margin: 0;
-}
-
-.inputGenderTitle {
-  float: left;
-  margin: 0;
+@media screen and (max-width: 480px) {
+  .userInputTitle {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .userValue {

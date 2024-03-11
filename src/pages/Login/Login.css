@@ -7,6 +7,13 @@
   font-family: sans-serif;
 }
 
+@media screen and (max-width: 480px) {
+  .Login {
+    padding-top: 150px;
+    width: 100%;
+  }
+}
+
 ::placeholder {
   color: gray !important;
 }
@@ -20,8 +27,21 @@
   border-radius: 30px;
 }
 
+@media screen and (max-width: 480px) {
+  .main {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+}
+
 form {
   width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    text-align: center !important;
+  }
 }
 
 .titleText {
@@ -29,6 +49,12 @@ form {
   font-size: 15px;
   color: #005b9b;
   margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    margin: 0px !important;
+  }
 }
 
 .input {
@@ -45,6 +71,12 @@ form {
   background-color: #ffece2 !important;
 }
 
+@media screen and (max-width: 480px) {
+  .input {
+    width: 320px !important;
+  }
+}
+
 .submit {
   width: 430px;
   height: 50px;
@@ -58,23 +90,30 @@ form {
   transition: 1s;
 }
 
+@media screen and (max-width: 480px) {
+  .submit {
+    width: 350px !important;
+    border-radius: 10px !important;
+    margin: 0px !important;
+    margin-bottom: 20px !important;
+  }
+}
+
 .submit:hover {
   background-color: rgb(21, 19, 72) !important;
   color: white;
   transition: 1s;
 }
 
-.main {
-  margin: 0 auto;
-  text-align: center;
-  height: 100%;
-  width: 60%;
-  border-radius: 30px;
-}
-
 .inputTitle {
   float: left;
   margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .inputTitle {
+    display: none;
+  }
 }
 
 .mail {
@@ -83,4 +122,10 @@ form {
 
 .password {
   margin-bottom: 30px !important;
+}
+
+@media screen and (max-width: 480px) {
+  .password {
+    margin-bottom: 10px !important;
+  }
 }

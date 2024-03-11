@@ -17,6 +17,11 @@
 
 @media screen and (max-width: 480px) {
   .header {
-    display: none;
+    height: 50px;
+    font-size: 35px;
+  }
+  .headerLine {
+    text-align: center;
+    margin: 0 !important;
   }
 }

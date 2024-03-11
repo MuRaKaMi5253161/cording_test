@@ -6,6 +6,13 @@
   color: #005b9b;
 }
 
+@media screen and (max-width: 480px) {
+  .SignUp {
+    padding-top: 60px !important;
+    width: 100% !important;
+  }
+}
+
 ::placeholder {
   color: white;
 }
@@ -27,12 +34,23 @@
   border-radius: 30px;
 }
 
+@media screen and (max-width: 480px) {
+  .main {
+    width: 100% !important;
+    margin: 0px !important;
+    padding-top: 10px !important;
+  }
+}
+
 form {
   width: 100%;
 }
 
-.profile {
-  margin-bottom: 50px;
+@media screen and (max-width: 480px) {
+  .form {
+    width: 90% !important;
+    text-align: center !important;
+  }
 }
 
 .profileImgBox {
@@ -82,22 +100,26 @@ form {
   padding-left: 20px;
   outline: none;
   background-color: #ffece2 !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.inputTitle {
+@media screen and (max-width: 480px) {
+  .input {
+    width: 320px !important;
+    margin-bottom: 5px;
+  }
+}
+
+.signUpInputTitle {
   float: left;
   margin: 0;
 }
 
-.inputNameTitle {
-  float: left;
-  margin: 0;
-}
-
-.inputMailTitle {
-  float: left;
-  margin: 0;
+@media screen and (max-width: 480px) {
+  .signUpInputTitle {
+    text-align: center !important;
+    width: 100%;
+  }
 }
 
 .mail {
@@ -105,7 +127,7 @@ form {
 }
 
 .birthDay {
-  height: 100px;
+  height: 87px;
 }
 
 .inputDate {
@@ -121,16 +143,12 @@ form {
   outline: none;
   font-family: sans-serif;
   background-color: #ffece2 !important;
+  margin-bottom: 10px;
   float: left;
 }
 
 .genderBox {
   height: 100px;
-}
-
-.inputGenderTitle {
-  float: left;
-  margin: 0;
 }
 
 .inputGender {
@@ -146,8 +164,18 @@ form {
   border: solid #005b9b;
   outline: none;
   background-color: #ffece2 !important;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   float: left;
+}
+
+@media screen and (max-width: 480px) {
+  .inputDate {
+    float: none !important;
+  }
+
+  .inputGender {
+    float: none !important;
+  }
 }
 
 .submit {
@@ -165,6 +193,20 @@ form {
   margin: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .submit {
+    width: 350px !important;
+    border-radius: 10px !important;
+    margin: 0px !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+  }
+
+  .inputGender {
+    float: none !important;
+  }
+}
+
 .submit:hover {
   background-color: rgb(21, 19, 72) !important;
   color: white !important;
@@ -179,7 +221,14 @@ form {
   text-align: left;
   color: red !important;
   font-size: 15px;
-  margin: 0;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .errorMessage {
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }
 
 .termsErrorMessage {

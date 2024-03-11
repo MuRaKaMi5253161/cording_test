@@ -6,13 +6,36 @@ import { db } from "../../firebase";
 const AddTaskModal: React.FC<any> = (props) => {
   const [title, setTaskTitle] = useState("");
   const [limitDate, setLimitDate] = useState("");
-  const [otherText, setOtherText] = useState("");
+  const [taskNameErrorMessage, setTaskNameErrorMessage] = useState("");
+  const [errorFlag, setErrorFlag] = useState<boolean>();
 
-  const addNewTask = () => {
+  const validCheck = () => {
+    setTaskNameErrorMessage("");
+    setErrorFlag(false);
+    if (title === (null || undefined || "")) {
+      setTaskNameErrorMessage("タスクを入力してください");
+      setErrorFlag(true);
+      return;
+    }
+    if (limitDate === (null || undefined || "")) {
+      setLimitDate("なし");
+      return;
+    }
+    return;
+  };
+
+  const addNewTask = (event: any) => {
+    event.preventDefault();
+
+    validCheck();
+    if (errorFlag || errorFlag === undefined) {
+      props.setShowModal(true);
+      return;
+    }
+
     addDoc(collection(db, "tasks"), {
       title: title,
       limitDate: limitDate,
-      otherText: otherText,
       userId: props.userId,
     });
     props.setShowModal(false);
@@ -41,6 +64,7 @@ const AddTaskModal: React.FC<any> = (props) => {
                   maxLength={10}
                   onChange={(e) => setTaskTitle(e.target.value)}
                 />
+                <p className="errorMessage">{taskNameErrorMessage}</p>
               </div>
               <div className="dateBox">
                 <p className="itemTitle">期限</p>
@@ -49,15 +73,6 @@ const AddTaskModal: React.FC<any> = (props) => {
                   className="limitDate"
                   onChange={(e) => setLimitDate(e.target.value)}
                 ></input>
-              </div>
-              <div className="otherTextBox">
-                <p className="itemTitle">メモなど</p>
-                <textarea
-                  className="otherText"
-                  placeholder="その他"
-                  maxLength={30}
-                  onChange={(e) => setOtherText(e.target.value)}
-                ></textarea>
               </div>
               <input type="submit" className="submitBtn" value="add Task" />
               <div className="cancelBtnBox">

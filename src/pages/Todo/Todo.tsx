@@ -80,7 +80,6 @@ function Todo() {
                 id={task.id}
                 title={task.title}
                 limitDate={task.limitDate}
-                otherText={task.otherText}
               />
             </div>
           ))}

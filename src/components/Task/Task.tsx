@@ -8,7 +8,6 @@ const Task: React.FC<{
   id: string;
   title: string;
   limitDate: string;
-  otherText: string;
 }> = (props) => {
   const navigation = useNavigate();
 
@@ -18,22 +17,13 @@ const Task: React.FC<{
     return;
   };
 
-  const limitDateCheck = () => {
-    if (props.limitDate === (null || undefined || "")) {
-      return;
-    } else {
-      return <p>{props.limitDate}まで</p>;
-    }
-  };
-
   return (
     <div className="Task">
       <div className="TaskNameBox">
         <p className="TaskName">{props.title}</p>
       </div>
       <div className="TaskDetail">
-        {limitDateCheck()}
-        {props.otherText}
+        <p>期限：{props.limitDate}</p>
       </div>
       <div>
         <button type="button" className="taskDeleteBtn" onClick={deleteTask}>

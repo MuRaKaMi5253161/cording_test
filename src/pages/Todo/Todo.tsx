@@ -20,6 +20,7 @@ function Todo() {
   const [tasks, setTasks] = useState<DocumentData>([]);
   const navigation = useNavigate();
 
+  // 型定義
   type PropsType = {
     id: string;
     title: string;
@@ -39,6 +40,7 @@ function Todo() {
     });
   }, [navigation]);
 
+  // タスクの取得
   useEffect(() => {
     const taskData = collection(db, "tasks");
     const taskList = query(

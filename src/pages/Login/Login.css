@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 480px) {
   .Login {
-    padding-top: 150px;
+    padding-top: 120px;
     width: 100%;
   }
 }
@@ -18,7 +18,7 @@
   color: gray !important;
 }
 
-.main {
+.loginMain {
   margin: 0 auto;
   text-align: center;
   height: 100%;
@@ -28,7 +28,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .main {
+  .loginMain {
     width: 100% !important;
     margin: 0px !important;
   }
@@ -44,15 +44,16 @@ form {
   }
 }
 
-.titleText {
+.loginTitleText {
   text-align: center;
   font-size: 15px;
   color: #005b9b;
   margin: 0;
+  padding-top: 30px;
 }
 
 @media screen and (max-width: 480px) {
-  .title {
+  .loginTitle {
     margin: 0px !important;
   }
 }
@@ -116,16 +117,12 @@ form {
   }
 }
 
-.mail {
-  margin: 10px !important;
-}
-
-.password {
+.loginPassword {
   margin-bottom: 30px !important;
 }
 
 @media screen and (max-width: 480px) {
-  .password {
+  .loginPassword {
     margin-bottom: 10px !important;
   }
 }

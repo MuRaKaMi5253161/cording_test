@@ -8,6 +8,7 @@ const AddTaskModal: React.FC<any> = (props) => {
   const [limitDate, setLimitDate] = useState("");
   const [taskNameErrorMessage, setTaskNameErrorMessage] = useState("");
 
+  // バリデーションチェック
   const validCheck = () => {
     setTaskNameErrorMessage("");
 
@@ -21,6 +22,7 @@ const AddTaskModal: React.FC<any> = (props) => {
     return 3;
   };
 
+  // タスクの登録処理
   const addNewTask = async (event: any) => {
     event.preventDefault();
     let noLimitDate = "なし";
@@ -56,6 +58,7 @@ const AddTaskModal: React.FC<any> = (props) => {
     return;
   };
 
+  // モーダルを閉じる
   const closeModal = () => {
     props.setShowModal(false);
   };

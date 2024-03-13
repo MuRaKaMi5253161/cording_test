@@ -7,7 +7,7 @@ import { db, storage } from "../../firebase";
 import { ref, uploadBytes } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = (props: any) => {
+const SignUp = () => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [pass, setPass] = useState("");
@@ -25,11 +25,9 @@ const SignUp = (props: any) => {
   const [condition, setCondition] = useState(false);
   const [profileImage, setProfileImage] = useState(Profile);
   const [profileImageFile, setProfileImageFile] = useState<any>();
-
+  const navigation = useNavigate();
   const regex =
     /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]{5}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
-
-  const navigation = useNavigate();
 
   const onFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
@@ -51,12 +49,14 @@ const SignUp = (props: any) => {
     return;
   };
 
+  // プロフィールの送信処理
   const sendUserProfile = (userId: string) => {
     const storageRef = ref(storage, "profileImg/" + userId + "/profileName");
     uploadBytes(storageRef, profileImageFile);
     return;
   };
 
+  // バリデーションチェック
   const validCheck = () => {
     setNameErrorMessage("");
     setMailErrorMessage("");
@@ -74,6 +74,16 @@ const SignUp = (props: any) => {
     }
     if (name.length > 100) {
       setNameErrorMessage("お名前は100文字以下で入力してください");
+      setErrorFlag(true);
+      return;
+    }
+    if (birthday === (null || undefined || "")) {
+      setBirthDayErrorMessage("生年月日を設定してください");
+      setErrorFlag(true);
+      return;
+    }
+    if (gender === (null || undefined || "")) {
+      setGenderErrorMessage("性別を設定してください");
       setErrorFlag(true);
       return;
     }
@@ -114,16 +124,6 @@ const SignUp = (props: any) => {
       setErrorFlag(true);
       return;
     }
-    if (birthday === (null || undefined || "")) {
-      setBirthDayErrorMessage("生年月日を設定してください");
-      setErrorFlag(true);
-      return;
-    }
-    if (gender === (null || undefined || "")) {
-      setGenderErrorMessage("性別を設定してください");
-      setErrorFlag(true);
-      return;
-    }
     if (!condition) {
       setTermsErrorMessage("利用規約に同意しチェックをしてください");
       setErrorFlag(true);
@@ -132,6 +132,7 @@ const SignUp = (props: any) => {
     return;
   };
 
+  // サインアップ処理
   const signUp = async (event: any) => {
     event.preventDefault();
 
@@ -161,27 +162,27 @@ const SignUp = (props: any) => {
 
   return (
     <div className="SignUp">
-      <div className="title">
-        <h1 className="titleText">サインイン</h1>
+      <div>
+        <h1 className="signUpTitleText">サインイン</h1>
       </div>
-      <div className="main">
+      <div className="signUpMain">
         <form onSubmit={signUp}>
-          <div className="profile">
-            <div className="profileImgBox">
-              <img src={profileImage} className="profileImg" alt="" />
+          <div className="signUpProfile">
+            <div className="signUpProfileImgBox">
+              <img src={profileImage} className="signUpProfileImg" alt="" />
             </div>
-            <label className="profileLabel">
+            <label className="signUpProfileLabel">
               プロフィールを設定
               <input
                 type="file"
                 accept="image/*"
                 onChange={onFileInputChange}
-                className="profileInput"
+                className="signUpProfileInput"
               />
             </label>
           </div>
 
-          <div className="name">
+          <div className="signUpName">
             <p className="signUpInputTitle">お名前</p>
             <input
               type="text"
@@ -192,7 +193,36 @@ const SignUp = (props: any) => {
             <p className="errorMessage">{nameErrorMessage}</p>
           </div>
 
-          <div className="mail">
+          <div className="signUpBirthDay">
+            <p className="signUpInputTitle">生年月日</p>
+            <br />
+            <input
+              type="date"
+              className="inputDate"
+              name="birthday"
+              onChange={(e) => setBirthday(e.target.value)}
+            />
+          </div>
+          <p className="errorMessage">{birthDayErrorMessage}</p>
+
+          <div className="signUpGenderBox">
+            <p className="signUpInputTitle">性別</p>
+            <br />
+            <select
+              name="inputGender"
+              className="inputGender"
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option value="" selected>
+                -
+              </option>
+              <option value="men">men</option>
+              <option value="women">women</option>
+            </select>
+          </div>
+          <p className="errorMessage">{genderErrorMessage}</p>
+
+          <div className="signUpMail">
             <p className="signUpInputTitle">メールアドレス</p>
             <input
               type="mail"
@@ -224,35 +254,6 @@ const SignUp = (props: any) => {
             />
             <p className="errorMessage">{rePassErrorMessage}</p>
           </div>
-
-          <div className="birthDay">
-            <p className="signUpInputTitle">生年月日</p>
-            <br />
-            <input
-              type="date"
-              className="inputDate"
-              name="birthday"
-              onChange={(e) => setBirthday(e.target.value)}
-            />
-          </div>
-          <p className="errorMessage">{birthDayErrorMessage}</p>
-
-          <div className="genderBox">
-            <p className="signUpInputTitle">性別</p>
-            <br />
-            <select
-              name="inputGender"
-              className="inputGender"
-              onChange={(e) => setGender(e.target.value)}
-            >
-              <option value="" selected>
-                -
-              </option>
-              <option value="men">men</option>
-              <option value="women">women</option>
-            </select>
-          </div>
-          <p className="errorMessage">{genderErrorMessage}</p>
 
           <div className="terms">
             <label>

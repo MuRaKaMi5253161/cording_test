@@ -10,10 +10,10 @@ function Login() {
   const [mailErrorMessage, setMailErrorMessage] = useState("");
   const [passErrorMessage, setPassErrorMessage] = useState("");
   const navigation = useNavigate();
-
   const regex =
     /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]{5}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
 
+  // バリデーションチェック
   const validCheck = () => {
     setMailErrorMessage("");
     setPassErrorMessage("");
@@ -54,6 +54,7 @@ function Login() {
     return;
   };
 
+  // ログイン処理
   const SignIn = (event: any) => {
     event.preventDefault();
 
@@ -65,11 +66,11 @@ function Login() {
 
     const auth = getAuth();
     signInWithEmailAndPassword(auth, mail, pass)
-      .then((userCredential) => {
+      .then(() => {
         alert("ログイン成功");
         navigation("/");
       })
-      .catch((error) => {
+      .catch(() => {
         alert("ログイン失敗");
         navigation("/Login");
       });
@@ -78,12 +79,12 @@ function Login() {
 
   return (
     <div className="Login">
-      <div className="title">
-        <h1 className="titleText">ログイン</h1>
+      <div className="loginTitle">
+        <h1 className="loginTitleText">ログイン</h1>
       </div>
-      <div className="main">
+      <div className="loginMain">
         <form onSubmit={SignIn}>
-          <div className="mail">
+          <div className="loginMail">
             <p className="inputTitle">メールアドレス</p>
             <input
               type="mail"
@@ -94,7 +95,7 @@ function Login() {
             <p className="errorMessage">{mailErrorMessage}</p>
           </div>
 
-          <div className="password">
+          <div className="loginPassword">
             <p className="inputTitle">パスワード</p>
             <input
               type="pass"

@@ -13,9 +13,9 @@ function User() {
   const [birthday, setBirthday] = useState("");
   const [gender, setGender] = useState("");
   const [profileImage, setProfileImage] = useState(Profile);
-
   const navigation = useNavigate();
 
+  // プロフィールの取得
   const getUserProfile = (userId: string) => {
     const storageRef = ref(storage, "profileImg/" + userId + "/profileName");
     getDownloadURL(storageRef)
@@ -25,6 +25,7 @@ function User() {
       .catch(() => setProfileImage(Profile));
   };
 
+  // ユーザー情報の取得
   const getUserInfo = async (userId: string) => {
     const users = collection(db, "users");
     const currentUser = query(users, where("id", "==", userId));
@@ -61,6 +62,7 @@ function User() {
     });
   }, []);
 
+  // ログアウト処理
   const logout = () => {
     signOut(auth)
       .then(() => {
@@ -70,15 +72,15 @@ function User() {
   };
 
   return (
-    <div className="SignUp">
-      <div className="title">
-        <h1 className="titleText">ユーザー情報</h1>
+    <div className="User">
+      <div className="userTitle">
+        <h1 className="userTitleText">ユーザー情報</h1>
       </div>
-      <div className="main">
+      <div className="userMain">
         <form>
-          <div className="profile">
-            <div className="profileImgBox">
-              <img src={profileImage} className="profileImg" alt="" />
+          <div className="userProfile">
+            <div className="userProfileImgBox">
+              <img src={profileImage} className="userProfileImg" alt="" />
             </div>
           </div>
 

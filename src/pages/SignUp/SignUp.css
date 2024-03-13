@@ -17,7 +17,7 @@
   color: white;
 }
 
-.titleText {
+.signUpTitleText {
   text-align: center;
   font-size: 15px;
   font-family: sans-serif;
@@ -26,7 +26,7 @@
   padding-top: 30px;
 }
 
-.main {
+.signUpMain {
   margin: 0 auto;
   text-align: center;
   height: 100%;
@@ -35,7 +35,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .main {
+  .signUpMain {
     width: 100% !important;
     margin: 0px !important;
     padding-top: 10px !important;
@@ -53,11 +53,17 @@ form {
   }
 }
 
-.profileImgBox {
+@media screen and (max-width: 480px) {
+  .signUpProfile {
+    margin-bottom: 40px !important;
+  }
+}
+
+.signUpProfileImgBox {
   padding-bottom: 20px;
 }
 
-.profileImg {
+.signUpProfileImg {
   width: 160px;
   height: 160px;
   border-radius: 100px;
@@ -65,13 +71,13 @@ form {
   border-style: solid;
 }
 
-.profileInput {
+.signUpProfileInput {
   display: none;
   width: 200px;
   height: 60px;
 }
 
-.profileLabel {
+.signUpProfileLabel {
   font-size: 10px;
   padding: 10px 40px;
   cursor: pointer;
@@ -122,12 +128,12 @@ form {
   }
 }
 
-.mail {
-  margin: 0 !important;
+.signUpBirthDay {
+  height: 87px;
 }
 
-.birthDay {
-  height: 87px;
+.signUpMail {
+  margin: 0 !important;
 }
 
 .inputDate {
@@ -147,12 +153,12 @@ form {
   float: left;
 }
 
-.genderBox {
-  height: 100px;
+.signUpGenderBox {
+  height: 80px;
 }
 
 .inputGender {
-  width: 110px;
+  width: 217px;
   height: 50px;
   font-size: 15px;
   font-family: sans-serif;

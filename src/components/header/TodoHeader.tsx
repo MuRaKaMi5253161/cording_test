@@ -10,10 +10,17 @@ const TodoHeader: React.FC = () => {
   const [profileImage, setProfileImage] = useState(Profile);
   const navigation = useNavigate();
 
+  // TODOページへ遷移
   const moveTodoPage = () => {
     navigation("/");
   };
 
+  // ユーザーページへ遷移
+  const moveUserPage = () => {
+    navigation("/User");
+  };
+
+  // プロフィールを取得
   const getUserProfile = (userId: string) => {
     const storageRef = ref(storage, "profileImg/" + userId + "/profileName");
     getDownloadURL(storageRef)
@@ -25,6 +32,7 @@ const TodoHeader: React.FC = () => {
       });
   };
 
+  // 認証情報を取得
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -35,10 +43,6 @@ const TodoHeader: React.FC = () => {
       }
     });
   }, []);
-
-  const moveUserPage = () => {
-    navigation("/User");
-  };
 
   return (
     <div className="TodoHeader">

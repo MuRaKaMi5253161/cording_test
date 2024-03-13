@@ -1,4 +1,4 @@
-.SignUp {
+.User {
   padding-top: 100px;
   width: 60%;
   height: 100%;
@@ -10,7 +10,7 @@
   color: white;
 }
 
-.titleText {
+.userTitleText {
   text-align: center;
   font-size: 15px;
   font-family: sans-serif;
@@ -19,7 +19,7 @@
   padding-top: 30px;
 }
 
-.main {
+.userMain {
   margin: 0 auto;
   text-align: center;
   height: 100%;
@@ -31,43 +31,26 @@ form {
   width: 100%;
 }
 
-.profile {
+.userProfile {
   margin-bottom: 50px;
 }
 
 @media screen and (max-width: 480px) {
-  .profile {
+  .userProfile {
     margin-bottom: 10px;
   }
 }
 
-.profileImgBox {
+.userProfileImgBox {
   padding-bottom: 20px;
 }
 
-.profileImg {
+.userProfileImg {
   width: 160px;
   height: 160px;
   border-radius: 100px;
   border-color: #fff;
   border-style: solid;
-}
-
-.profileLabel {
-  font-size: 10px;
-  padding: 10px 40px;
-  cursor: pointer;
-  border-radius: 20px;
-  border-style: none;
-  color: gray;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: 1s;
-}
-
-.profileLabel:hover {
-  background-color: rgb(93, 92, 92);
-  color: white;
-  transition: 1s;
 }
 
 .userInputTitle {

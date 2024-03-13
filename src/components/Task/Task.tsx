@@ -11,6 +11,7 @@ const Task: React.FC<{
 }> = (props) => {
   const navigation = useNavigate();
 
+  // タスクの削除
   const deleteTask = async () => {
     await deleteDoc(doc(db, "tasks", props.id));
     navigation("/");

@@ -7,38 +7,52 @@ const AddTaskModal: React.FC<any> = (props) => {
   const [title, setTaskTitle] = useState("");
   const [limitDate, setLimitDate] = useState("");
   const [taskNameErrorMessage, setTaskNameErrorMessage] = useState("");
-  const [errorFlag, setErrorFlag] = useState<boolean>();
 
   const validCheck = () => {
     setTaskNameErrorMessage("");
-    setErrorFlag(false);
+
     if (title === (null || undefined || "")) {
       setTaskNameErrorMessage("タスクを入力してください");
-      setErrorFlag(true);
-      return;
+      return 1;
     }
     if (limitDate === (null || undefined || "")) {
-      setLimitDate("なし");
-      return;
+      return 2;
     }
-    return;
+    return 3;
   };
 
-  const addNewTask = (event: any) => {
+  const addNewTask = async (event: any) => {
     event.preventDefault();
+    let noLimitDate = "なし";
 
-    validCheck();
-    if (errorFlag || errorFlag === undefined) {
-      props.setShowModal(true);
-      return;
+    let pattern = validCheck();
+    switch (pattern) {
+      case 1:
+        props.setShowModal(true);
+        break;
+      case 2:
+        addDoc(collection(db, "tasks"), {
+          title: title,
+          limitDate: noLimitDate,
+          userId: props.userId,
+        });
+        setTaskTitle("");
+        setLimitDate("");
+        props.setShowModal(false);
+        break;
+      case 3:
+        addDoc(collection(db, "tasks"), {
+          title: title,
+          limitDate: limitDate,
+          userId: props.userId,
+        });
+        setTaskTitle("");
+        setLimitDate("");
+        props.setShowModal(false);
+        break;
+      default:
+        break;
     }
-
-    addDoc(collection(db, "tasks"), {
-      title: title,
-      limitDate: limitDate,
-      userId: props.userId,
-    });
-    props.setShowModal(false);
     return;
   };
 

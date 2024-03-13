@@ -6,6 +6,13 @@
   color: #005b9b;
 }
 
+@media screen and (max-width: 480px) {
+  .User {
+    padding-top: 60px !important;
+    width: 100% !important;
+  }
+}
+
 ::placeholder {
   color: white;
 }
@@ -27,8 +34,12 @@
   border-radius: 30px;
 }
 
-form {
-  width: 100%;
+@media screen and (max-width: 480px) {
+  .userMain {
+    width: 100% !important;
+    margin: 0px !important;
+    padding-top: 10px !important;
+  }
 }
 
 .userProfile {
@@ -66,8 +77,8 @@ form {
 }
 
 .userValue {
-  color: black;
-  font-size: 18px;
+  color: #005b9b;
+  font-size: 17px;
   font-weight: bold;
 }
 
@@ -81,6 +92,7 @@ form {
   margin-bottom: 40px;
   background-color: rgb(225, 92, 92);
   transition: 1s;
+  margin-top: 10px;
 }
 
 .logoutBtn:hover {

@@ -55,8 +55,8 @@ function Todo() {
 
   return (
     <div className="Todo">
-      <div className="title">
-        <h1 className="titleText">タスクを登録</h1>
+      <div className="todoTitle">
+        <h1 className="todoTitleText">タスクを登録</h1>
       </div>
       <input
         type="button"

@@ -14,9 +14,17 @@
   }
 }
 
-.title {
+.todoTitle {
   margin: 10px;
   font-family: sans-serif;
+}
+
+.todoTitleText {
+  text-align: center;
+  font-size: 15px;
+  color: #005b9b;
+  margin: 0;
+  padding-top: 30px;
 }
 
 .newTaskBtn {

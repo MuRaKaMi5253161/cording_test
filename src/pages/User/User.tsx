@@ -77,40 +77,38 @@ function User() {
         <h1 className="userTitleText">ユーザー情報</h1>
       </div>
       <div className="userMain">
-        <form>
-          <div className="userProfile">
-            <div className="userProfileImgBox">
-              <img src={profileImage} className="userProfileImg" alt="" />
-            </div>
+        <div className="userProfile">
+          <div className="userProfileImgBox">
+            <img src={profileImage} className="userProfileImg" alt="" />
           </div>
+        </div>
 
-          <div className="userName">
-            <p className="userInputTitle">お名前</p>
-            <p className="userValue">{name}</p>
-          </div>
+        <div className="userName">
+          <p className="userInputTitle">お名前</p>
+          <p className="userValue">{name}</p>
+        </div>
 
-          <div className="userMail">
-            <p className="userInputTitle">メールアドレス</p>
-            <p className="userValue">{mail}</p>
-          </div>
+        <div className="userMail">
+          <p className="userInputTitle">メールアドレス</p>
+          <p className="userValue">{mail}</p>
+        </div>
 
-          <div className="userBirthDay">
-            <p className="userInputTitle">生年月日</p>
-            <p className="userValue">{birthday}</p>
-          </div>
+        <div className="userBirthDay">
+          <p className="userInputTitle">生年月日</p>
+          <p className="userValue">{birthday}</p>
+        </div>
 
-          <div className="userGender">
-            <p className="userInputTitle">性別</p>
-            <p className="userValue">{gender}</p>
-          </div>
+        <div className="userGender">
+          <p className="userInputTitle">性別</p>
+          <p className="userValue">{gender}</p>
+        </div>
 
-          <input
-            type="button"
-            className="logoutBtn"
-            value="logout"
-            onClick={logout}
-          />
-        </form>
+        <input
+          type="button"
+          className="logoutBtn"
+          value="logout"
+          onClick={logout}
+        />
       </div>
     </div>
   );

@@ -1,0 +1,102 @@
+.User {
+  padding-top: 100px;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  color: #005b9b;
+}
+
+@media screen and (max-width: 480px) {
+  .User {
+    padding-top: 60px !important;
+    width: 100% !important;
+  }
+}
+
+::placeholder {
+  color: white;
+}
+
+.userTitleText {
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #005b9b;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.userMain {
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 430px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .userMain {
+    width: 100% !important;
+    margin: 0px !important;
+    padding-top: 10px !important;
+  }
+}
+
+.userProfile {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 480px) {
+  .userProfile {
+    margin-bottom: 10px;
+  }
+}
+
+.userProfileImgBox {
+  padding-bottom: 20px;
+}
+
+.userProfileImg {
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.userInputTitle {
+  float: left;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .userInputTitle {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.userValue {
+  color: #005b9b;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.logoutBtn {
+  width: 350px;
+  height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  border-style: none;
+  color: white;
+  margin-bottom: 40px;
+  background-color: rgb(225, 92, 92);
+  transition: 1s;
+  margin-top: 10px;
+}
+
+.logoutBtn:hover {
+  background-color: rgb(141, 61, 61);
+  color: white;
+  transition: 1s;
+}

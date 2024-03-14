@@ -1,0 +1,246 @@
+.SignUp {
+  padding-top: 100px;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  color: #005b9b;
+}
+
+@media screen and (max-width: 480px) {
+  .SignUp {
+    padding-top: 60px !important;
+    width: 100% !important;
+  }
+}
+
+::placeholder {
+  color: white;
+}
+
+.signUpTitleText {
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #005b9b;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.signUpMain {
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  width: 430px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .signUpMain {
+    width: 100% !important;
+    margin: 0px !important;
+    padding-top: 10px !important;
+  }
+}
+
+form {
+  width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    width: 90% !important;
+    text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signUpProfile {
+    margin-bottom: 40px !important;
+  }
+}
+
+.signUpProfileImgBox {
+  padding-bottom: 20px;
+}
+
+.signUpProfileImg {
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.signUpProfileInput {
+  display: none;
+  width: 200px;
+  height: 60px;
+}
+
+.signUpProfileLabel {
+  font-size: 10px;
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  border-style: none;
+  color: gray;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 1s;
+}
+
+.profileLabel:hover {
+  background-color: rgb(93, 92, 92);
+  color: white;
+  transition: 1s;
+}
+
+.input {
+  width: 400px;
+  height: 50px;
+  font-size: 15px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  border: solid #005b9b;
+  color: rgb(21, 19, 72);
+  padding-left: 20px;
+  outline: none;
+  background-color: #ffece2 !important;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .input {
+    width: 320px !important;
+    margin-bottom: 5px;
+  }
+}
+
+.signUpInputTitle {
+  float: left;
+  margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .signUpInputTitle {
+    text-align: center !important;
+    width: 100%;
+  }
+}
+
+.signUpBirthDay {
+  height: 87px;
+}
+
+.signUpMail {
+  margin: 0 !important;
+}
+
+.inputDate {
+  width: 180px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-style: none;
+  border: solid #005b9b;
+  color: rgb(21, 19, 72);
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+  font-family: sans-serif;
+  background-color: #ffece2 !important;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.signUpGenderBox {
+  height: 80px;
+}
+
+.inputGender {
+  width: 217px;
+  height: 50px;
+  font-size: 15px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  border-style: none;
+  padding-left: 20px;
+  right: 10px;
+  color: rgb(21, 19, 72);
+  border: solid #005b9b;
+  outline: none;
+  background-color: #ffece2 !important;
+  margin-bottom: 10px;
+  float: left;
+  appearance: none;
+}
+
+@media screen and (max-width: 480px) {
+  .inputDate {
+    float: none !important;
+  }
+
+  .inputGender {
+    float: none !important;
+  }
+}
+
+.submit {
+  width: 350px;
+  height: 50px;
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 20px;
+  border-style: none;
+  color: white !important;
+  margin-top: 20px;
+  margin-bottom: 120px;
+  background-color: #005b9b !important;
+  transition: 1s;
+  margin: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .submit {
+    width: 350px !important;
+    border-radius: 10px !important;
+    margin: 0px !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+  }
+
+  .inputGender {
+    float: none !important;
+  }
+}
+
+.submit:hover {
+  background-color: rgb(21, 19, 72) !important;
+  color: white !important;
+  transition: 1s;
+}
+
+.moveLoginPageText {
+  padding-bottom: 100px;
+}
+
+.errorMessage {
+  text-align: left;
+  color: red !important;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .errorMessage {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.termsErrorMessage {
+  text-align: center;
+  color: red !important;
+  font-size: 15px;
+  margin: 0;
+}

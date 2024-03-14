@@ -1,0 +1,66 @@
+.Task {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  background-color: rgb(248, 246, 244, 0.5);
+  border-radius: 5px;
+  border: solid #005b9b;
+  font-family: sans-serif;
+  color: rgb(120, 120, 120);
+}
+
+@media screen and (max-width: 480px) {
+  .Task {
+    height: 180px;
+  }
+}
+
+.TaskNameBox {
+  width: 100%;
+}
+
+.TaskName {
+  padding-left: 0;
+  padding-bottom: 15px;
+  width: 100%;
+  height: 30px;
+  color: rgb(120, 120, 120);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-bottom: solid #005b9b;
+}
+
+@media screen and (max-width: 480px) {
+  .TaskName {
+    height: 20px;
+  }
+}
+
+.TaskDetail {
+  text-align: center;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+.taskDeleteBtn {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  margin-bottom: 40px;
+  background-color: #005b9b;
+  transition: 1s;
+}
+
+.taskDeleteBtn:hover {
+  background-color: rgb(21, 19, 72);
+  color: white;
+  transition: 1s;
+}

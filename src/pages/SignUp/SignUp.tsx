@@ -132,6 +132,15 @@ const SignUp = () => {
     return;
   };
 
+  const currentDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    const formattedDate = `${year}-${month}-${day}`;
+    return formattedDate;
+  };
+
   // サインアップ処理
   const signUp = async (event: any) => {
     event.preventDefault();
@@ -200,6 +209,7 @@ const SignUp = () => {
               type="date"
               className="inputDate"
               name="birthday"
+              max={currentDate()}
               onChange={(e) => setBirthday(e.target.value)}
             />
           </div>

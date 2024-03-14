@@ -183,7 +183,7 @@ const SignUp = () => {
           </div>
 
           <div className="signUpName">
-            <p className="signUpInputTitle">お名前</p>
+            <p className="signUpInputTitle">お名前(必須)</p>
             <input
               type="text"
               className="input"
@@ -194,7 +194,7 @@ const SignUp = () => {
           </div>
 
           <div className="signUpBirthDay">
-            <p className="signUpInputTitle">生年月日</p>
+            <p className="signUpInputTitle">生年月日(必須)</p>
             <br />
             <input
               type="date"
@@ -206,7 +206,7 @@ const SignUp = () => {
           <p className="errorMessage">{birthDayErrorMessage}</p>
 
           <div className="signUpGenderBox">
-            <p className="signUpInputTitle">性別</p>
+            <p className="signUpInputTitle">性別(必須)</p>
             <br />
             <select
               name="inputGender"
@@ -214,7 +214,7 @@ const SignUp = () => {
               onChange={(e) => setGender(e.target.value)}
             >
               <option value="" selected>
-                -
+                ー
               </option>
               <option value="men">men</option>
               <option value="women">women</option>
@@ -223,7 +223,7 @@ const SignUp = () => {
           <p className="errorMessage">{genderErrorMessage}</p>
 
           <div className="signUpMail">
-            <p className="signUpInputTitle">メールアドレス</p>
+            <p className="signUpInputTitle">メールアドレス(必須)</p>
             <input
               type="mail"
               className="input"
@@ -234,7 +234,7 @@ const SignUp = () => {
           </div>
 
           <div className="pass">
-            <p className="signUpInputTitle">パスワード</p>
+            <p className="signUpInputTitle">パスワード(必須)</p>
             <input
               type="pass"
               className="input"
@@ -245,7 +245,7 @@ const SignUp = () => {
           </div>
 
           <div className="pass">
-            <p className="signUpInputTitle">パスワード再入力</p>
+            <p className="signUpInputTitle">パスワード再入力(必須)</p>
             <input
               type="pass"
               className="input"
@@ -263,7 +263,7 @@ const SignUp = () => {
                 onChange={() => setCondition(!condition)}
               ></input>
               <a href="https://menherasenpai.notion.site/457df49475494671807673a0a3346451">
-                利用規約に同意する
+                利用規約に同意する(必須)
               </a>
             </label>
             <p className="termsErrorMessage">{termsErrorMessage}</p>
